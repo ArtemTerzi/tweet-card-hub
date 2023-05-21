@@ -1,3 +1,75 @@
+### ENGLISH Localization
+
+# Tweet Card Hub
+
+Welcome to the "Tweet Card Hub" application!
+
+## Description
+
+This application is designed to view user statistics, both well-known and
+lesser-known users, such as the number of followers and tweets. It also provides
+the ability to follow users to track their activity. You can also filter the
+list of users based on your subscription status. Additionally, the main page
+showcases important thoughts from influential people of different generations,
+as if social media had existed at that time. :)
+
+## Before Getting Started
+
+Before starting to use the application, we strongly recommend familiarizing
+yourself with all the quotes displayed on the main page. These quotes provide
+inspiration and information that can help you get into the right mindset and
+prepare for using the application. Take some time to contemplate them and find
+inspiration before you begin.
+
+## Technologies
+
+In the development of this application, we used the following technologies:
+
+- Webpack
+- JavaScript
+- React
+- Redux Toolkit
+- HTTP requests (CRUD)
+- Figma (for design and prototyping)
+- Styled Components (for styling)
+- Other technologies and tools necessary for the development and functioning of
+  the application.
+
+## Installation
+
+1. Clone the repository to your local computer.
+2. Navigate to the project directory: cd tweet-card-hub.
+3. Install dependencies by running the command: npm install.
+4. Start the application using the command: npm start.
+5. Open your web browser and go to: http://localhost:3000/tweet-card-hub.
+
+## Contribution
+
+If you find any bugs, have suggestions, or wish to contribute to the development
+of this project, please open an Issue or Pull Request in our repository. I am
+happy to accept any help and feedback!
+
+## License
+
+This project does not have a license as it is used for non-commercial purposes
+and serves as a test task during the technical assignment before the interview.
+
+## Contacts
+
+If you have any questions or need additional information, please contact us
+using the following contacts:
+
+- Name: Artem Terzi
+- Email: terzi.artem.yuriyovych@gmail.com
+- Telegram: https://t.me/Drabing
+- LinkedIn: https://www.linkedin.com/in/artem-terzi/
+
+## Thank you for using the "Tweet Card Hub" application!
+
+We hope you find it useful and enjoyable to use. Best of luck!
+
+### UKRAINIAN Localization
+
 # Tweet Card Hub
 
 Ласкаво просимо до програми "Tweet Card Hub"!
