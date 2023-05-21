@@ -1,8 +1,8 @@
 {
-  "name": "tweets-card",
+  "name": "tweet-card-hub",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ArtemTerzi.github.io/tweets-card/",
+  "homepage": "https://ArtemTerzi.github.io/tweet-card-hub/",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
