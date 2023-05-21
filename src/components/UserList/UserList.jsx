@@ -1,15 +1,27 @@
 import { useSelector } from 'react-redux';
-import { selectUsers } from '../../redux/selectors';
+import { selectFilter, selectUsers } from '../../redux/selectors';
 import UserCard from '../UserCard/UserCard';
 import { CardList } from './UserList.styled';
 
 const UserList = () => {
   const userList = useSelector(selectUsers);
+  const filter = useSelector(selectFilter);
+
+  const getFilteredUsers = (users, statusFilter) => {
+    switch (statusFilter) {
+      case 'Follow':
+        return userList.filter(user => !user.isFollowing);
+      case 'Followings':
+        return userList.filter(user => user.isFollowing);
+      default:
+        return users;
+    }
+  };
 
   return (
     <CardList>
-      {userList &&
-        userList.map(user => {
+      {getFilteredUsers(userList, filter) &&
+        getFilteredUsers(userList, filter).map(user => {
           return (
             <li key={user.id}>
               <UserCard {...user} />

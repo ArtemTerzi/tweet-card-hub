@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { fetchUsers, handleFollow, handleUnfollow } from "./operation";
+import { createSlice, isAnyOf } from '@reduxjs/toolkit';
+import { fetchUsers, handleFollow, handleUnfollow } from './operation';
 
 const initialState = {
   items: [],
@@ -7,7 +7,7 @@ const initialState = {
   error: null,
 };
 
-const handlePendidng = (state) => {
+const handlePending = state => {
   state.isLoading = true;
 };
 
@@ -24,22 +24,38 @@ const handleRejected = (state, { error: { message } }) => {
 
 const updateUser = (state, { payload }) => {
   const updatedUser = payload;
-  const userIndex = state.items.findIndex((user) => user.id === updatedUser.id);
+  const userIndex = state.items.findIndex(user => user.id === updatedUser.id);
   if (userIndex !== -1) {
     state.items[userIndex] = updatedUser;
   }
 };
 
 const usersSlice = createSlice({
-  name: "users",
+  name: 'users',
   initialState,
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
       .addCase(fetchUsers.fulfilled, handleFulfilled)
-      .addCase(fetchUsers.pending, handlePendidng)
-      .addCase(fetchUsers.rejected, handleRejected)
-      .addCase(handleFollow.fulfilled, updateUser)
-      .addCase(handleUnfollow.fulfilled, updateUser);
+      .addMatcher(
+        isAnyOf(handleFollow.fulfilled, handleUnfollow.fulfilled),
+        updateUser
+      )
+      .addMatcher(
+        isAnyOf(
+          fetchUsers.pending,
+          handleFollow.pending,
+          handleUnfollow.pending
+        ),
+        handlePending
+      )
+      .addMatcher(
+        isAnyOf(
+          fetchUsers.rejected,
+          handleFollow.rejected,
+          handleUnfollow.rejected
+        ),
+        handleRejected
+      );
   },
 });
 
