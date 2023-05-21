@@ -1,6 +1,8 @@
-import logo from '../../images/logo.png';
-import cardPicture from '../../images/card-picture.png';
-import Frame from '../../images/avatar-border.png';
+import { useDispatch } from 'react-redux';
+import logo from 'images/logo.png';
+import cardPicture from 'images/card-picture.png';
+import Frame from 'images/avatar-border.png';
+import { handleFollow, handleUnfollow } from 'redux/operation';
 import {
   AvaBorder,
   CardPicture,
@@ -13,8 +15,6 @@ import {
   UserAvatar,
   UserName,
 } from './UserCard.styled';
-import { useDispatch } from 'react-redux';
-import { handleFollow, handleUnfollow } from '../../redux/operation';
 
 const UserCard = ({ avatar, id, followers, isFollowing, tweets, user }) => {
   const dispatch = useDispatch();

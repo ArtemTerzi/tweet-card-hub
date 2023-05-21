@@ -1,3 +1,3 @@
-import TweetCard from "./TweetCard";
+import UserCard from './UserCard';
 
-export default TweetCard;
+export default UserCard;

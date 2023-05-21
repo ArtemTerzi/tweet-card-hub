@@ -37,8 +37,3 @@ export const Navlink = styled(NavLink)`
     color: indigo;
   }
 `;
-
-export const Footer = styled.footer`
-  padding: 15px 0;
-  text-align: center;
-`;

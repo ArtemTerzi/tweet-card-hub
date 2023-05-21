@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { selectUsers } from '../../redux/selectors';
+import { selectUsers } from 'redux/selectors';
 import { LoadMore } from './LoadMoreBtn.styled';
 
 const LoadMoreBtn = ({ increaseUsers }) => {

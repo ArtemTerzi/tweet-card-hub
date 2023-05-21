@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import { selectFilter, selectUsers } from '../../redux/selectors';
-import UserCard from '../UserCard/UserCard';
+import { selectFilter, selectUsers } from 'redux/selectors';
+import UserCard from 'components/UserCard';
 import { CardList } from './UserList.styled';
 
 const UserList = () => {

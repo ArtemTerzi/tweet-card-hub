@@ -1,12 +1,12 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import {
-  Footer,
   GlobalContainer,
   Header,
   NavList,
   Navlink,
 } from './SharedLayout.styled';
+import Footer from 'components/Footer';
 
 const SharedLayout = () => {
   return (
@@ -26,7 +26,7 @@ const SharedLayout = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
-      <Footer>Developed by Artem Terzi</Footer>
+      <Footer />
     </GlobalContainer>
   );
 };
