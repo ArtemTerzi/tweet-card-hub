@@ -1,10 +1,10 @@
 import LoadMoreBtn from '../../components/LoadMoreBtn';
-import { Container } from '../../components/App/App.styled';
 import UserList from '../../components/UserList/UserList';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchUsers } from 'redux/operation';
 import BackLink from 'components/BackLink';
+import StatusFilter from 'components/StatusFilter';
 
 const TweetsPage = () => {
   const dispatch = useDispatch();
@@ -17,11 +17,12 @@ const TweetsPage = () => {
   const increaseUsers = () => setLimit(limit + 4);
 
   return (
-    <Container>
+    <main>
       <BackLink />
+      <StatusFilter />
       <UserList />
       <LoadMoreBtn increaseUsers={increaseUsers} />
-    </Container>
+    </main>
   );
 };
 

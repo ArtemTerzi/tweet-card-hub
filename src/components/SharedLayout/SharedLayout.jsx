@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import {
+  Footer,
   GlobalContainer,
   Header,
   NavList,
@@ -14,7 +15,7 @@ const SharedLayout = () => {
         <nav>
           <NavList>
             <li>
-              <Navlink to="/"> Home</Navlink>
+              <Navlink to="/"> Quotes</Navlink>
             </li>
             <li>
               <Navlink to="/tweets"> Tweets</Navlink>
@@ -25,6 +26,7 @@ const SharedLayout = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
+      <Footer>Developed by Artem Terzi</Footer>
     </GlobalContainer>
   );
 };

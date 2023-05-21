@@ -8,7 +8,7 @@ export const BackLink = () => {
 
   return (
     <Button>
-      <Link to={backLinkHref.current}>Go back</Link>
+      <Link to={backLinkHref.current}> ☚ Go back</Link>
     </Button>
   );
 };
