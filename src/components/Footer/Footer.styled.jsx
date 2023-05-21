@@ -18,6 +18,19 @@ export const FooterDescription = styled.p`
   }
 `;
 
+export const UAWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const UAText = styled.p`
+  width: 100px;
+`;
+
+export const UAImg = styled.img`
+  width: 100px;
+`;
+
 export const Icons = styled.div`
   display: flex;
   gap: 12px;

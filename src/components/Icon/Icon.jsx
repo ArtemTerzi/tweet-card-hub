@@ -1,5 +1,10 @@
-const Icon = ({ name, className, width, height }) => (
-  <svg className={className} width={width} height={height}>
+const Icon = ({ name, className, width, height, ariaLabel }) => (
+  <svg
+    className={className}
+    width={width}
+    height={height}
+    aria-label={ariaLabel}
+  >
     <use xlinkHref={`#${name}`} />
   </svg>
 );
